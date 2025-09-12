@@ -1,0 +1,27 @@
+$ cd /mnt/Staff/Nguyen_J/DMRS-INTEPRETATION
+
+
+# Create virtual environment for evo2
+python3.11 -m venv ~/evo2_env
+
+# Activate the environment
+source ~/evo2_env/bin/activate
+
+# Upgrade pip
+pip install --upgrade pip
+
+# Verify you're using the right Python
+python --version
+which python
+
+# Install transformer engine (you might need to install without conda dependencies)
+pip install transformer-engine>=2.0.0
+
+# Install flash attention
+pip install flash-attn==2.8.0.post2 --no-build-isolation
+
+# Install other dependencies
+pip install torch torchvision torchaudio
+
+# Install Vortex from GitHub
+!pip install git+https://github.com/Zymrael/vortex.git
